@@ -1,5 +1,6 @@
 ﻿using System;
 using MenuChanger.Attributes;
+using PurenailCore.SystemUtil;
 using RandomizerMod.Settings;
 
 namespace HK8YPlando;
@@ -15,7 +16,7 @@ public class ScatteredAndLostSettings
 
 file class CSRIgnoreAttribute : Attribute { }
 
-public class RandomizerSettings
+public class RandomizerSettings : Copyable<RandomizerSettings>
 {
     public bool Enabled = false;
     public bool EnableCheckpoints = true;
